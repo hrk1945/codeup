@@ -1,0 +1,134 @@
+@use "global" as *;
+
+.pagetop {
+  display: none;
+  position: fixed;
+  right: rem(20);
+  bottom: rem(41);
+  z-index: 100;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    right: 0%;
+    padding: 0 rem(31);
+    top: 88%;
+  }
+}
+
+.pagetop::before {
+  content: "";
+  width: rem(20);
+  height: rem(20);
+  border-top: solid 2px #333;
+  border-right: solid 2px #333;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: rem(12);
+  top: rem(20);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    left: rem(44);
+    top: rem(19);
+  }
+}
+.pagetop a:hover:before {
+  content: "";
+  width: rem(20);
+  height: rem(20);
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: rem(12);
+  top: rem(20);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    left: rem(44);
+    top: rem(19);
+  }
+}
+.low__pagetop a:hover:before {
+  content: "";
+  width: rem(20);
+  height: rem(20);
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: rem(12);
+  top: rem(20);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    left: rem(44);
+    top: rem(19);
+  }
+}
+.low__pagetop::before {
+  content: "";
+  width: rem(20);
+  height: rem(20);
+  border-top: solid 2px #333;
+  border-right: solid 2px #333;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: rem(12);
+  top: rem(20);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    left: rem(44);
+    top: rem(19);
+  }
+}
+
+.pagetop a {
+  display: block;
+  font-size: 0;
+  width: rem(45);
+  height: rem(45);
+  text-align: center;
+  background: #ffffff;
+  line-height: 50px;
+}
+.pagetop a:hover {
+  background-color: #333333;
+}
+
+.pagetop a:hover .fas {
+  color: #ffffff;
+}
+.low__pagetop a:hover {
+  background-color: #333333;
+}
+
+.low__pagetop a:hover .fas {
+  color: #ffffff;
+}
+
+.low__pagetop {
+  display: none;
+  position: fixed;
+  bottom: rem(41);
+  z-index: 100;
+  right: 0;
+  padding-right: rem(23);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    top: 88.55%;
+    left: 91.55%;
+    right: rem(5);
+    padding: 0 rem(31);
+  }
+}
+.low__pagetop a {
+  display: block;
+  font-size: 0;
+  width: rem(45);
+  height: rem(45);
+  text-align: center;
+  background: #ffffff;
+  line-height: 50px;
+}
+.low__pagetop a i {
+  font-size: rem(31);
+  color: #333333;
+  line-height: rem(45);
+}

@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.footer__list.pc-list {
+  display: block;
+}
+
+.footer__list {
+  text-align: center;
+}
+
+.footer .hover {
+  padding-right: 0;
+}
+
+.footer .pc-list__item a {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(16);
+    height: auto;
+    padding-top: rem(6);
+    padding-bottom: rem(6);
+    transition-duration: 1s;
+    border-bottom: 2px solid transparent;
+  }
+}
+.footer .pc-list__item a:hover {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    height: auto;
+    padding-top: rem(6);
+    padding-bottom: rem(6);
+    border-color: yellow;
+    font-size: rem(16);
+  }
+}
+.footer .pc-list__item:last-child a {
+  padding-right: rem(16);
+}

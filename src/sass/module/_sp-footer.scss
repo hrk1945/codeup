@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.sp-footer {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    display: none;
+  }
+}
+.sp-footer li a {
+  color: $white;
+  margin-top: rem(8);
+}
+.sp-footer li {
+  margin-top: rem(8);
+}
+
+.sp-footer .footer__inner {
+  justify-content: center;
+}

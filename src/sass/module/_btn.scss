@@ -1,0 +1,101 @@
+@use "global" as *;
+
+.btn {
+  display: inline-block;
+  font-size: rem(20);
+  padding: rem(10) rem(114);
+  border: 1px solid #ffffff;
+  color: $white;
+  background-color: #333333;
+  letter-spacing: 0.025em;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(16);
+    padding: rem(3) rem(136);
+    line-height: 3.375;
+  }
+}
+
+.btn.btn-group {
+  text-align: center;
+  @include mq("md") {
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(16);
+    padding: rem(5) rem(29) rem(6) rem(26);
+    line-height: 1;
+  }
+}
+
+// ホバーアニメーション用
+.btn {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  transition: 1s;
+}
+.btn:hover {
+  color: $black;
+  transition: all 0.5s;
+}
+.btn.btn-group:hover {
+  @include mq("md") {
+    color: $white;
+    transition: all 0.5s;
+  }
+}
+
+.btn::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  background: #ffffff;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 1s;
+}
+.btn.btn-group::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  background: #333333;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 0.5s;
+}
+
+.btn:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.contact .btn {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    padding: rem(15) rem(105) rem(14) rem(99);
+    letter-spacing: 0.1em;
+    font-size: rem(20);
+    line-height: 1.5;
+  }
+  font-size: rem(20);
+  line-height: 1.5;
+  padding: rem(11) rem(91) rem(12) rem(92);
+}

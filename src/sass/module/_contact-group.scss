@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.contact-group {
+  margin-top: rem(70);
+  padding: 0 rem(20);
+}
+
+.group__title {
+  width: 100%;
+  overflow: hidden;
+}
+
+.group__title a {
+  display: block;
+  animation: animetxt 15s linear infinite;
+  transform: translateX(100%);
+}
+.group__title.slow a {
+  display: block;
+  animation: animetxt2 35s linear infinite;
+  transform: translateX(-100%);
+}
+
+@keyframes animetxt {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animetxt2 {
+  100% {
+    transform: translateX(100%);
+  }
+}
+ 

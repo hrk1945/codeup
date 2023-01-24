@@ -1,0 +1,49 @@
+@use "global" as *;
+.pc-group {
+  width: rem(1042);
+  margin: auto;
+  margin-top: rem(32);
+  padding: 0 rem(25);
+  display: none;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    display: block;
+  }
+}
+.pc__group__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.group__time {
+  color: $white;
+  font-size: rem(16);
+}
+.group__btn a {
+  font-size: rem(14);
+
+  border: 1px solid #ffffff;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-left: rem(48);
+    font-size: rem(14);
+  }
+}
+
+.group__title h2 {
+  font-size: rem(16);
+  font-weight: 400;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: 0;
+    margin-left: rem(61);
+  }
+}
+.group__title h2:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+.group__hover-btn a:hover {
+  background-color: #333333;
+  color: $white;
+}

@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.section__contents {
+  align-items: center;
+  margin-top: rem(48);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(35);
+    height: rem(550);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.overview .section__contents {
+  align-items: center;
+  margin-top: rem(48);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(48);
+    height: rem(550);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: rem(20);
+  }
+}
+.works .section__contents {
+  align-items: center;
+  margin-top: rem(48);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(48);
+    height: rem(550);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: rem(20);
+  }
+}
+
+

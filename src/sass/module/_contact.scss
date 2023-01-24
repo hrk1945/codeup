@@ -1,0 +1,16 @@
+@use "global" as *;
+.contact {
+  margin-top: rem(114);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(150);
+  }
+}
+
+.contact.section--contents::before {
+  content: "";
+  display: none;
+}
+
+
+

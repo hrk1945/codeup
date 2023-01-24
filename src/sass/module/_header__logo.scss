@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.header__logo {
+  width: rem(70);
+  height: rem(39);
+
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+
+    height: inherit;
+    display: flex;
+    align-items: center;
+    width: rem(95);
+    height: rem(31);
+  }
+}

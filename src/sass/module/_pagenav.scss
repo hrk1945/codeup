@@ -1,0 +1,103 @@
+@use "global" as *;
+
+.wp-pagenavi {
+  clear: both;
+  text-align: center;
+}
+.wp-pagenavi a {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  padding: rem(0) rem(5) rem(1) rem(5);
+  margin: 0 rem(9);
+  white-space: nowrap;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+}
+.wp-pagenavi a:hover {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.wp-pagenavi span.current {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  font-weight: bold;
+}
+.wp-pagenavi__inner {
+  margin-top: rem(80);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(104);
+    padding-top: rem(5);
+  }
+}
+.wp-pagenavi__inner span {
+  font-size: rem(16);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(104);
+    font-size: rem(16);
+  }
+}
+.wp-pagenavi__inner a {
+  font-size: rem(16);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(104);
+    font-size: rem(16);
+  }
+}
+
+.wp-pagenavi span {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  padding: rem(0) rem(5) rem(1) rem(5);
+  margin: 0 rem(9);
+  white-space: nowrap;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+}
+
+.wp-pagenavi .pages {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  padding: rem(0) rem(13) rem(1) rem(13);
+  margin: 0 rem(9);
+  white-space: nowrap;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  margin-right: rem(12);
+}
+
+.wp-pagenavi .last {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  padding: rem(0) rem(13) rem(1) rem(13);
+  margin: 0 rem(9);
+  white-space: nowrap;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  margin-left: rem(12);
+}
+

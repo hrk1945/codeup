@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.low__mv {
+  position: relative;
+  z-index: -10;
+  overflow: hidden;
+}
+
+
+
+.low__mv:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #c4c4c4;
+}
+
+.low__img img {
+  aspect-ratio: 375/425;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    
+    aspect-ratio: 1280/370;
+  }
+}
+
+.low__copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $white;
+  letter-spacing: 0.05rem;
+}
+.low__title {
+  font-size: rem(28);
+  font-weight: bold;
+  white-space: nowrap;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(35);
+  }
+}

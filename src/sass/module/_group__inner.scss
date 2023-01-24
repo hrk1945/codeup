@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.group__inner {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    display: flex;
+    align-items: center;
+  }
+}

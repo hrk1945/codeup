@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.header__inner {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0 rem(22);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    justify-content: space-between;
+    padding: 0 rem(31);
+    padding-right: 0;
+  }
+}

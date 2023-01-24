@@ -1,0 +1,27 @@
+@use "global" as *;
+
+
+.blog.section--contents::before {
+  content: "";
+  width: 94.6875%;
+  height: rem(650);
+  position: absolute;
+  top: rem(-35);
+  left: 0;
+ background-image: none;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    height: rem(1212);
+    top: rem(-99);
+  }
+}
+
+.blog.section--contents {
+  margin-top: rem(93);
+  position: relative;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(210);
+  }
+}
+

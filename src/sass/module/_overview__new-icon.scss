@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.overview__new-icon{
+  width: rem(69);
+  height: rem(60);
+  position: absolute;
+  top: rem(-20);left: rem(-3);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    width: rem(69);
+    height: rem(60);
+    position: absolute;
+    top: rem(-20);left: rem(-3);
+  }
+}

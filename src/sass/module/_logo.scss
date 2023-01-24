@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.logo {
+  width: rem(70);
+  height: rem(23);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    height: inherit;
+    display: flex;
+    align-items: center;
+    width: rem(95);
+    height: rem(31);
+  }
+}
+
+.footer .logo {
+  width: rem(70);
+  height: rem(23);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    height: inherit;
+    display: flex;
+    align-items: center;
+    width: rem(70);
+    height: rem(29);
+    height: inherit;
+  }
+}
+
+.footer__list a:hover{
+  border-bottom: 1px solid #fff;
+}

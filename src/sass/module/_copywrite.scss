@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.copywrite p {
+  color: $white;
+  font-size: rem(11);
+  display: flex;
+  justify-content: center;
+  line-height: auto;
+  letter-spacing: rem(1.2);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(15);
+  }
+}
+
+.copywrite__inner {
+  display: block;
+  margin-top: rem(32);
+  padding-bottom: rem(48);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(80);
+  }
+}

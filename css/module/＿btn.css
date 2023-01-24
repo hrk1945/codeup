@@ -1,0 +1,86 @@
+body {
+  font-family: "Noto Sans JP";
+  font-weight: 300;
+}
+
+.u-desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .u-desktop {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mobile {
+    display: none;
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-size: 20px;
+  font-size: 1.25rem;
+  padding: 10px 114px;
+  padding: 0.625rem 7.125rem;
+  border: 1px solid #ffffff;
+  color: #fff;
+  white-space: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 0.9090909091vw;
+    font-size: 1rem;
+    padding: 0.1875rem 8.5rem;
+    line-height: 3.375;
+  }
+}
+
+.btn {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  color: #111;
+}
+
+.btn::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  background: #ffffff;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.btn:hover::before {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+/*# sourceMappingURL=＿btn.css.map */

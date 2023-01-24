@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.company {
+  margin-top: rem(85);
+  padding: 0 rem(20);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(115);
+  }
+}
+
+.company dl {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    flex-flow: row wrap;
+    background-color: transparent;
+  }
+  display: flex;
+  width: 100%;
+  color: #fff;
+  max-width: rem(1100);
+  margin-left: auto;
+  margin-right: auto;
+  flex-flow: column;
+}
+.company dt {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    background-color: transparent;
+  }
+
+  flex-basis: 15%;
+  padding: rem(20);
+  background-color: gray;
+
+  border-bottom: 1px solid #ccc;
+}
+.company dd {
+  max-width: rem(935);
+  flex-basis: 85%;
+  padding: rem(20);
+  border-bottom: 1px solid #ccc;
+}

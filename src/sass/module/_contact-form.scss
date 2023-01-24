@@ -1,0 +1,142 @@
+@use "global" as *;
+
+.Form {
+  margin-top: rem(40);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem(720);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(80);
+  }
+}
+
+.Form-Item {
+  padding-left: rem(14);
+  padding-right: rem(14);
+  padding-top: rem(16);
+  padding-bottom: rem(16);
+  flex-wrap: wrap;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    padding-top: rem(24);
+    padding-bottom: rem(24);
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+.Form-Item-Label {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    width: 30%;
+    max-width: rem(248);
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-size: rem(18);
+  }
+  color: #fff;
+  max-width: inherit;
+  display: flex;
+  align-items: center;
+  font-size: rem(15);
+}
+
+.Form-Item-Label.isMsg {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(8);
+    margin-bottom: auto;
+  }
+  margin-top: 0;
+}
+
+.Form-Item-Label-Required {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-right: rem(8);
+    padding-top: rem(8);
+    padding-bottom: rem(8);
+    width: rem(48);
+    display: inline-block;
+    text-align: center;
+    background: #545454;
+    color: #fff;
+    font-size: rem(14);
+  }
+  padding-top: rem(4);
+  padding-bottom: rem(4);
+  width: rem(32);
+  font-size: rem(10);
+}
+
+.Form-Item-Input {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    border: 1px solid #ddd;
+    margin-left: rem(40);
+    padding-left: 1em;
+    padding-right: 1em;
+    height: rem(48);
+    flex: 1;
+    width: 80%;
+
+    background: #eaedf2;
+    font-size: rem(18);
+  }
+  margin-left: 0;
+  margin-top: rem(18);
+  height: rem(40);
+  flex: inherit;
+  font-size: rem(15);
+  width: 100%;
+}
+
+.Form-Item-Textarea {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    border: 1px solid #ddd;
+
+    margin-left: rem(40);
+    padding-left: 1em;
+    padding-right: 1em;
+    height: rem(216);
+    flex: 1;
+    width: 100%;
+    max-width: rem(454.2);
+    background: #eaedf2;
+    font-size: rem(18);
+  }
+  margin-top: rem(18);
+  margin-left: 0;
+  height: rem(200);
+  flex: inherit;
+  font-size: rem(15);
+  width: 100%;
+}
+
+.Form-Btn {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(32);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    width: rem(280);
+    display: block;
+    letter-spacing: 0.05em;
+    font-size: rem(20);
+  }
+  color: #fff;
+  margin-top: rem(24);
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  width: rem(160);
+  font-size: rem(16);
+  background-color: #545454;
+}
+.form-btn {
+  display: flex;
+  justify-content: center;
+}

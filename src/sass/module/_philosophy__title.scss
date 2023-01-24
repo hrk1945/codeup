@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.philosophy__title h2 {
+  font-size: rem(20);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(25);
+  }
+}
+.p-title__inner {
+  padding: 0 rem(20);
+  margin-top: rem(70);
+
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    padding: 0;
+  }
+}
+
+.philosophy__title p {
+  font-size: rem(16);
+  margin-top: rem(20);
+}
+.philosophy__title {
+  color: $white;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: rem(700);
+}

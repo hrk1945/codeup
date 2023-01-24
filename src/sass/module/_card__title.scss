@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.card__title {
+  font-weight: 500;
+  line-height: 1.94;
+  font-size: rem(18);
+  padding-top: rem(2);
+  letter-spacing: rem(1);
+ 
+}
+.card__title h2{
+  font-size: rem(18);
+  font-weight: 400;
+  letter-spacing: 0.056em;
+  line-height: 1.9444;
+  margin-top: rem(4);
+color: #333333;
+}

@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.header {
+  background: (rgba(17, 17, 17, 0.5));
+}
+
+.headerColorScroll {
+  background-color: $black;
+  position: fixed;
+  transition: all 0.3s;
+}

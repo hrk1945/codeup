@@ -1,0 +1,14 @@
+@use "global" as *;
+.map {
+  filter: grayscale(90%);
+  height: rem(300);
+  padding: 0 rem(20);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rem(80);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    width: rem(1100);
+    height: rem(367);
+  }
+}

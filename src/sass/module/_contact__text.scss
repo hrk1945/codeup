@@ -1,0 +1,14 @@
+@use "global" as *;
+.contact__text{
+  margin-top: rem(20);
+  font-size: rem(16);
+  letter-spacing: 0.12em;
+  text-align: initial;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+ font-size: rem(16);
+    text-align: center;
+    padding-top: rem(9);
+  }
+
+}

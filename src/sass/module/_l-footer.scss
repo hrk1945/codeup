@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.l-footer{
+display: none;
+@include mq("md") {
+  font-size: vw(strip-unit($inner), 10);
+  display: block;
+  margin-top: rem(32);
+  
+}
+}

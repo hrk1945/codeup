@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.blog__inner {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    margin-top: rem(221);
+  }
+}
+
+
+.low__blog .blog__inner{
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+   margin: 0;
+  }
+  
+}

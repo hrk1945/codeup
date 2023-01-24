@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.mv__copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $white;
+  letter-spacing: 0.05rem;
+  width: 100%;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    top: 50%;
+    @include mq("md") {
+      font-size: vw(strip-unit($inner), 10);
+      font-size: rem(50);
+      line-height: 1;
+    }
+  }
+}
+
+
+.mv__title {
+  font-size: rem(28);
+  font-weight: bold;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(50);
+    line-height: 1;
+  }
+}
+.mv__sub-title {
+  letter-spacing: 0.025em;
+  font-size: rem(20);
+  font-weight: bold;
+  margin-top: rem(23);
+  line-height: 1;
+  padding-bottom: 5px;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(25);
+    line-height: 1;
+    margin-top: rem(24);
+  }
+}
+
+

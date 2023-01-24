@@ -1,0 +1,29 @@
+@use "global" as *;
+.group__flex {
+  display: flex;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    align-items: center;
+  }
+}
+
+.group__time {
+  color: $white;
+}
+.group__btn a {
+  font-size: rem(14);
+  padding: rem(5) rem(20);
+  border: 1px solid #ffffff;
+  color: $white;
+  margin-left: rem(32);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(14);
+    padding: rem(5) rem(21);
+  }
+}
+
+
+
+
+
