@@ -262,9 +262,6 @@ select::-ms-expand {
       flex-wrap: wrap;
   margin-top: 64px;
   margin-top: 4rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -490,6 +487,7 @@ select::-ms-expand {
 
 .card__img img {
   aspect-ratio: 335/223;
+  height: 100%;
 }
 @media screen and (min-width: 768px) {
   .card__img img {
@@ -698,10 +696,10 @@ select::-ms-expand {
 }
 
 .Form-Item {
-  padding-left: 14px;
-  padding-left: 0.875rem;
-  padding-right: 14px;
-  padding-right: 0.875rem;
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  padding-right: 20px;
+  padding-right: 1.25rem;
   padding-top: 16px;
   padding-top: 1rem;
   padding-bottom: 16px;
@@ -715,9 +713,6 @@ select::-ms-expand {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -759,6 +754,7 @@ select::-ms-expand {
 }
 
 .Form-Item-Label-Required {
+  background: #545454;
   padding-top: 4px;
   padding-top: 0.25rem;
   padding-bottom: 4px;
@@ -767,6 +763,7 @@ select::-ms-expand {
   width: 2rem;
   font-size: 10px;
   font-size: 0.625rem;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .Form-Item-Label-Required {
@@ -777,7 +774,6 @@ select::-ms-expand {
     width: 3rem;
     display: inline-block;
     text-align: center;
-    background: #545454;
     color: #fff;
     font-size: 0.875rem;
   }
@@ -800,14 +796,12 @@ select::-ms-expand {
   .Form-Item-Input {
     font-size: 0.9090909091vw;
     border: 1px solid #ddd;
-    margin-left: 2.5rem;
     padding-left: 1em;
     padding-right: 1em;
     height: 3rem;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    width: 80%;
     background: #eaedf2;
     font-size: 1.125rem;
   }
@@ -830,7 +824,6 @@ select::-ms-expand {
   .Form-Item-Textarea {
     font-size: 0.9090909091vw;
     border: 1px solid #ddd;
-    margin-left: 2.5rem;
     padding-left: 1em;
     padding-right: 1em;
     height: 13.5rem;
@@ -838,7 +831,6 @@ select::-ms-expand {
         -ms-flex: 1;
             flex: 1;
     width: 100%;
-    max-width: 28.3875rem;
     background: #eaedf2;
     font-size: 1.125rem;
   }
@@ -880,6 +872,17 @@ select::-ms-expand {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+  color: red;
+  border: none;
 }
 
 .contact-group {
@@ -2166,9 +2169,42 @@ body {
   }
 }
 
+.page_link {
+  color: #fff;
+  width: 100%;
+}
+
+.link_inner {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+
+.link_flex {
+  font-size: 20px;
+  font-size: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  max-width: 31.25rem;
+}
+
+.link_archive {
+  text-align: center;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
 .wp-pagenavi {
   clear: both;
   text-align: center;
+  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .wp-pagenavi a {
@@ -3102,6 +3138,102 @@ body {
   }
 }
 
+.single_inner {
+  padding: 0 20px;
+  padding: 0 1.25rem;
+  margin-top: 48px;
+  margin-top: 3rem;
+  color: #fff;
+  display: grid;
+}
+@media screen and (min-width: 768px) {
+  .single_inner {
+    font-size: 0.9090909091vw;
+    max-width: 62.5rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.single_img img {
+  height: 500px;
+  height: 31.25rem;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .single_img img {
+    font-size: 0.9090909091vw;
+  }
+}
+
+.single_title {
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+@media screen and (min-width: 768px) {
+  .single_title {
+    font-size: 0.9090909091vw;
+    font-size: 1.875rem;
+  }
+}
+
+.single_text {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  color: #fff;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .single_text {
+    font-size: 0.9090909091vw;
+    font-size: 1.25rem;
+  }
+}
+
+.single_subtext {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  border: 1px solid #000;
+}
+@media screen and (min-width: 768px) {
+  .single_subtext {
+    font-size: 0.9090909091vw;
+  }
+}
+
+.single_subtext {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+
+.single_list {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.single_list li {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.group__flex.single {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+
 @media screen and (min-width: 768px) {
   .sp-footer {
     font-size: 0.9090909091vw;
@@ -3644,10 +3776,12 @@ body {
   margin-top: 0.8125rem;
   margin-left: 20px;
   margin-left: 1.25rem;
+  color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .url__inner {
     font-size: 0.9090909091vw;
+    color: #FFFFFF;
   }
 }
 
@@ -3690,6 +3824,7 @@ body {
 
 .achieve__img img {
   aspect-ratio: 375/279;
+  height: 100%;
 }
 @media screen and (min-width: 768px) {
   .achieve__img img {

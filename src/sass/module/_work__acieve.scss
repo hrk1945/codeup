@@ -15,6 +15,7 @@
 
 .achieve__img img {
   aspect-ratio: 375/279;
+  height: 100%;
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);
     aspect-ratio: 525/349;

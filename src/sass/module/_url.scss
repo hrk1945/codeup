@@ -12,8 +12,10 @@
 .url__inner {
   margin-top: rem(13);
  margin-left: rem(20);
-  @include mq("md") {
-    font-size: vw(strip-unit($inner), 10);
+ color:#FFFFFF;
+ @include mq("md") {
+   font-size: vw(strip-unit($inner), 10);
+   color:#FFFFFF;
   }
 }
 .url__inner span {

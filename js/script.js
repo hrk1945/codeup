@@ -103,13 +103,15 @@ $(function () {
 
 // AOS
 AOS.init({
-  offset: 100,
+  // offset: 100,
   delay: 200,
   duration: 800,
-  easing: "ease-out",
-  anchorPlacement: "bottom-top",
-  once: false,
+  // easing: "ease-out",
+  // anchorPlacement: "bottom-top",
+  // once: false,
 });
+
+
 
 // 下層スワイパー
 

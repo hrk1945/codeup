@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: rem(64);
-  justify-content: center;
+  // justify-content: center;
   position: relative;
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);

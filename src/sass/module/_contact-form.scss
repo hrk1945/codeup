@@ -12,8 +12,8 @@
 }
 
 .Form-Item {
-  padding-left: rem(14);
-  padding-right: rem(14);
+  padding-left: rem(20);
+  padding-right: rem(20);
   padding-top: rem(16);
   padding-bottom: rem(16);
   flex-wrap: wrap;
@@ -22,7 +22,7 @@
     padding-top: rem(24);
     padding-bottom: rem(24);
     width: 100%;
-    display: flex;
+
     align-items: center;
   }
 }
@@ -60,26 +60,26 @@
     width: rem(48);
     display: inline-block;
     text-align: center;
-    background: #545454;
     color: #fff;
     font-size: rem(14);
   }
+  background: #545454;
   padding-top: rem(4);
   padding-bottom: rem(4);
   width: rem(32);
   font-size: rem(10);
+  text-align: center;
 }
 
 .Form-Item-Input {
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);
     border: 1px solid #ddd;
-    margin-left: rem(40);
+
     padding-left: 1em;
     padding-right: 1em;
     height: rem(48);
     flex: 1;
-    width: 80%;
 
     background: #eaedf2;
     font-size: rem(18);
@@ -97,13 +97,12 @@
     font-size: vw(strip-unit($inner), 10);
     border: 1px solid #ddd;
 
-    margin-left: rem(40);
     padding-left: 1em;
     padding-right: 1em;
     height: rem(216);
     flex: 1;
     width: 100%;
-    max-width: rem(454.2);
+
     background: #eaedf2;
     font-size: rem(18);
   }
@@ -139,4 +138,14 @@
 .form-btn {
   display: flex;
   justify-content: center;
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+  color: red;
+  border: none;
 }
