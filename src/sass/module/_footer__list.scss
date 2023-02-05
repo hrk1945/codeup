@@ -36,3 +36,8 @@
 .footer .pc-list__item:last-child a {
   padding-right: rem(16);
 }
+
+
+.footer .pc-list__item a::after {
+  display: contents;
+}

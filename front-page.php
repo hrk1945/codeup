@@ -1,5 +1,15 @@
 <?php get_header(); ?>
 
+<!-- 変数たち -->
+<?php
+$top = esc_url( home_url( '/' ));
+$news = esc_url( home_url( '/news/' ));
+$philosophy = esc_url( home_url( '/philosophy/' ));
+$works = esc_url( home_url( '/works/' ));
+$company = esc_url( home_url( '/company/' ));
+$blog = esc_url( home_url( '/blog/' ));
+$contact = esc_url( home_url( '/contact/' ));
+?>
 
 <main>
   <!-- 以下mv -->
@@ -21,27 +31,39 @@
   </div>
 
   <!-- グループ -->
+
+  <?php
+  $args = array( 
+    'post_type' => 'post',
+    'posts_per_page' => 1,
+ ); 
+  $the_query = new WP_Query($args); if($the_query->have_posts()):
+?>
   <div id="group" class="group l-group">
+    <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
     <div class="group__inner">
       <div class="group__flex">
         <div class="group__time">
-          <time datetime="2020-07-20">2020.07.20</time>
+          <time datetime="<?php the_time('c')?>"> <?php the_time('Y/m/d')?></time>
         </div>
         <div class="group__btn">
-          <a href="#">お知らせ</a>
+          <a href="#"> <?php $cat = get_the_category();
+            $cat = $cat[0]; { echo $cat->name; } ?></a>
         </div>
       </div>
 
       <h2 class="group__title">
-        <a href="#">
-          今後の再拡大の防止とコロナ禍後の働き方をしっかりと検討していくため、2021年10月31日までとしていた在宅勤務期間を当分の間、延長することといたしました。
+        <a href="<?php the_permalink(); ?>">
+          <?php echo get_the_content(); ?>
         </a>
       </h2>
     </div>
+    <?php endwhile; wp_reset_postdata(); endif; ?>
     <div class="section__btn">
-      <a class="btn btn-group" href="./news.html">すべて見る</a>
+      <a class="btn btn-group" href="<?php echo esc_url( home_url( '/news/' )); ?>">すべて見る</a>
     </div>
   </div>
+
 
   <!-- コンテント -->
   <section id="content" class="content section--contents">
@@ -53,7 +75,7 @@
       <div class="content__items" data-aos="zoom-in">
         <div class="content__item">
           <div class="content__img">
-            <a class="content__hover" href="./philosophy.html">
+            <a class="content__hover" href="<?php echo esc_url( home_url( '/philosophy/' )); ?>">
               <img src="<?php echo get_template_directory_uri(); ?>/images/common/card-1.png" alt="" />
             </a>
           </div>
@@ -63,7 +85,7 @@
         </div>
         <div class="content__item">
           <div class="content__img">
-            <a class="content__hover" href="./philosophy.html">
+            <a class="content__hover" href="<?php echo esc_url( home_url( '/philosophy/' )); ?>">
               <img src="<?php echo get_template_directory_uri(); ?>/images/common/card-2.png" alt="" />
             </a>
           </div>
@@ -73,7 +95,7 @@
         </div>
         <div class="content__item">
           <div class="content__img">
-            <a class="content__hover" href="./philosophy.html">
+            <a class="content__hover" href="<?php echo esc_url( home_url( '/philosophy/' )); ?>">
               <img src="<?php echo get_template_directory_uri(); ?>/images/common/card-3.png" alt="" />
             </a>
           </div>
@@ -83,7 +105,7 @@
         </div>
         <div class="content__item">
           <div class="content__img">
-            <a class="content__hover" href="./philosophy.html">
+            <a class="content__hover" href="<?php echo esc_url( home_url( '/philosophy/' )); ?>">
               <img src="<?php echo get_template_directory_uri(); ?>/images/common/card-4.png" alt="" />
             </a>
           </div>
@@ -96,6 +118,15 @@
   </section>
 
   <!-- ワークス -->
+
+  <?php
+     $args = array(
+     'post_type' => 'works',
+     'posts_per_page' => 3,
+      );  
+   $the_query = new WP_Query($args); if($the_query->have_posts()):
+  ?>
+
   <section id="works" class="works section--contents">
     <div class="section__titles">
       <h2 class="works__title section__title">制作実績</h2>
@@ -106,18 +137,16 @@
         <div class="container">
           <div class="swiper">
             <div class="swiper-wrapper">
+              <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
               <div class="swiper-slide">
-                <img class="__img" src="<?php echo get_template_directory_uri(); ?>/images/common/swiper-1.png"
-                  alt="" />
+                <?php if (has_post_thumbnail()): ?>
+                <?php the_post_thumbnail('full'); ?>
+                <?php else: ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-4.png" alt="" />
+                <?php endif; ?>
               </div>
-              <div class="swiper-slide">
-                <img class="__img" src="<?php echo get_template_directory_uri(); ?>/images/common/swiper-2.png"
-                  alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img class="__img" src="<?php echo get_template_directory_uri(); ?>/images/common/swiper-3.png"
-                  alt="" />
-              </div>
+              <?php endwhile; wp_reset_postdata(); endif; ?>
+
             </div>
           </div>
           <!-- ページネーション -->
@@ -135,7 +164,7 @@
             </p>
           </div>
           <div class="section__btn">
-            <a class="btn" href="./works.html">詳しく見る</a>
+            <a class="btn" href="<?php echo esc_url( home_url( '/works/' )); ?>">詳しく見る</a>
           </div>
         </div>
       </div>
@@ -164,7 +193,7 @@
             </p>
           </div>
           <div class="section__btn">
-            <a class="btn" href="./company.html">詳しく見る</a>
+            <a class="btn" href="<?php echo esc_url( home_url( '/company/' )); ?>">詳しく見る</a>
           </div>
         </div>
       </div>
@@ -172,6 +201,13 @@
   </section>
 
   <!-- ブログ -->
+  <?php
+     $args = array(
+     'post_type' => 'blog',
+     'posts_per_page' => 3,
+      );  
+   $the_query = new WP_Query($args); if($the_query->have_posts()):
+  ?>
   <section id="blog" class="blog section--contents">
     <div class="section__titles">
       <h2 class="blog__title section__title">ブログ</h2>
@@ -180,25 +216,34 @@
 
     <div class="card__section" data-aos="fade-up">
       <div class="blog__cards">
+        <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
         <a class="blog__card" href="./blog.html">
           <div class="card__inner">
             <div class="card__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-1.png" alt="" />
+              <?php if (has_post_thumbnail()): ?>
+              <?php the_post_thumbnail('full'); ?>
+              <?php else: ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-4.png" alt="" />
+              <?php endif; ?>
             </div>
             <div class="card__texts">
               <div class="card__title">
-                <h2>WEBサイトリニューアル</h2>
+                <h2><?php the_title(); ?></h2>
               </div>
               <div class="card__text">
                 <p>
-                  制作実績に「シノハラ株式会社
-                  」様のコーポレートサイトリニューアルを掲載。
+                  <?php echo get_the_content(); ?>
                 </p>
               </div>
               <div class="card__flex">
-                <p>制作実績</p>
+                <p><?php
+						  $taxonomy_terms = get_the_terms($post->ID, 'works_category'); 
+						  if ( $taxonomy_terms ) {
+						    echo '<span>'.$taxonomy_terms[0]->name.'</span>';
+						  }
+						?></p>
 
-                <time datetime="2021-07-20">2022.07.20</time>
+                <time datetime="<?php the_time('c')?>"> <?php the_time('Y/m/d')?></time>
               </div>
             </div>
           </div>
@@ -206,56 +251,15 @@
             <img src="<?php echo get_template_directory_uri(); ?>/images/common/Newアイコン.png" alt="" />
           </div>
         </a>
-        <a class="blog__card" href="./blog.html">
-          <div class="card__inner">
-            <div class="card__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-2.png" alt="" />
-            </div>
-            <div class="card__texts">
-              <div class="card__title">
-                <h2>WEBデザイナーの募集開始</h2>
-              </div>
-              <div class="card__text">
-                <p>
-                  自分の能力と裁量を大きくしていきたい。そうした希望をお持ちの方は大歓迎です。
-                </p>
-              </div>
-              <div class="card__flex">
-                <p>採用情報</p>
-                <time datetime="2021-07-20">2022.11.06</time>
-              </div>
-            </div>
-          </div>
-        </a>
+        <?php endwhile; wp_reset_postdata(); endif; ?>
 
-        <a class="blog__card" href="./blog.html">
-          <div class="card__inner">
-            <div class="card__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-3.png" alt="" />
-            </div>
-            <div class="card__texts">
-              <div class="card__title">
-                <h2>「健康経営優良法人2020」に認定</h2>
-              </div>
-              <div class="card__text">
-                <p>
-                  経済産業省によりCODE
-                  UPSが「健康経営優良法人2020」に認定されました。
-                </p>
-              </div>
-              <div class="card__flex">
-                <p>会社広報</p>
-                <time datetime="2021-07-20">2021.07.20</time>
-              </div>
-            </div>
-          </div>
-        </a>
       </div>
     </div>
     <div class="section__btn">
-      <a class="btn" href="./blog.html">詳しく見る</a>
+      <a class="btn" href="<?php echo esc_url( home_url( '/blog/' )); ?>">詳しく見る</a>
     </div>
   </section>
+
 
 
 </main>

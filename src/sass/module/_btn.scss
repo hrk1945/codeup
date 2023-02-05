@@ -16,12 +16,16 @@
   }
 }
 
+
+
+
 .btn.btn-group {
   text-align: center;
+  
   @include mq("md") {
     font-weight: 500;
-    color: #000000;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #333333;
     font-size: vw(strip-unit($inner), 10);
     font-size: rem(16);
     padding: rem(5) rem(29) rem(6) rem(26);
@@ -49,9 +53,11 @@
   transition: all 0.5s;
 }
 .btn.btn-group:hover {
+  color: $black;
+  transition: all 0.5s;
   @include mq("md") {
-    color: $white;
-    transition: all 0.5s;
+    color: $black;
+  transition: all 0.5s;
   }
 }
 
@@ -76,10 +82,10 @@
   left: 0;
   z-index: -1;
   content: "";
-  background: #333333;
+  background: #ffffff;
   transform-origin: right top;
   transform: scale(0, 1);
-  transition: transform 0.5s;
+  transition: transform 1s;
 }
 
 .btn:hover::before {

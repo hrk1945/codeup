@@ -267,23 +267,6 @@
   <!-- ワークカード一覧 -->
 
 
-  <!-- コンタクト -->
-  <section id="contact" class="contact section--contents">
-    <div class="contact__inner">
-      <div class="contact__contents">
-        <div class="section__titles">
-          <h2 class="contact__title section__title">お問い合わせ</h2>
-          <span class="contact__sub-title sub-title">Contact</span>
-        </div>
-        <p class="contact__text">
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-        </p>
-        <div class="section__btn section__btn-contact">
-          <a class="btn" href="">お問い合わせへ</a>
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- ページトップ -->
   <p class="low__pagetop">
     <a href="./philosophy.html"> </a>

@@ -8,7 +8,8 @@ $company = esc_url( home_url( '/company/' ));
 $blog = esc_url( home_url( '/blog/' ));
 $contact = esc_url( home_url( '/contact/' ));
 ?>
-<?php if(!is_page('contact')): ?>
+<!-- <?php if(!is_page('contact')): ?>
+ <-- コンタクト -->
 <section id="contact" class="contact section--contents">
   <div class="contact__inner">
     <div class="contact__contents">
@@ -21,12 +22,12 @@ $contact = esc_url( home_url( '/contact/' ));
         内容を確認後、各担当からご連絡いたします。
       </p>
       <div class="section__btn section__btn-contact">
-        <a class="btn" href="./contact.html">お問い合わせへ</a>
+        <a class="btn" href="<?php echo $contact; ?>">お問い合わせへ</a>
       </div>
     </div>
   </div>
 </section>
-<?php endif;?>
+<?php endif;?> -->
 <!-- ページトップ -->
 <p class="pagetop">
   <a href="./index.html"> </a>

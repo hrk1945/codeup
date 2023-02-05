@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.single_page{
+  margin-top: rem(30);
+}
+
 .single_inner {
   padding: 0 rem(20);
   margin-top: rem(48);

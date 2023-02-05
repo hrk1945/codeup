@@ -47,7 +47,9 @@
     font-size: vw(strip-unit($inner), 10);
     margin-top: rem(8);
     margin-bottom: auto;
+    font-size: rem(18);
   }
+  font-size: rem(15);
   margin-top: 0;
 }
 
@@ -148,4 +150,10 @@
 .wpcf7 form.payment-required .wpcf7-response-output {
   color: red;
   border: none;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  .wpcf7 form.sent .wpcf7-response-output {
+    border-color: #46b450;
+}
 }

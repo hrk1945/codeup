@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main>
+<main class="single_page">
   <!-- パンクズリスト -->
   <?php get_template_part('breadcrumb'); ?>
 
@@ -7,7 +7,7 @@
   <!-- 投稿ページ -->
   <?php if (have_posts()): ?>
   <?php while (have_posts()) : the_post(); ?>
-  <div class="single">
+  <div class=" single">
     <div class="single_inner">
       <h2 class="single_title">
         <?php the_title(); ?></h2>

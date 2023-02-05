@@ -355,24 +355,7 @@
   <div class="wp-pagenavi">
     <?php wp_pagenavi(); ?>
   </div>
-  <!-- コンタクト -->
-  <section id="contact" class="contact section--contents">
-    <div class="contact__inner">
-      <div class="contact__contents">
-        <div class="section__titles">
-          <h2 class="contact__title section__title">お問い合わせ</h2>
-          <span class="contact__sub-title sub-title">Contact</span>
-        </div>
-        <p class="contact__text">
-          お仕事・お見積のご依頼、お問合せ、その他ご相談を承ります。
-          内容を確認後、各担当からご連絡いたします。
-        </p>
-        <div class="section__btn section__btn-contact">
-          <a class="btn" href="./contact.html">お問い合わせへ</a>
-        </div>
-      </div>
-    </div>
-  </section>
+
   <!-- ページトップ -->
   <p class="low__pagetop">
     <a href="./news.html"> </a>

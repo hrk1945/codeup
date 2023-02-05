@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main>
+<main class="single_page">
   <!-- パンクズリスト -->
   <?php get_template_part('breadcrumb'); ?>
 

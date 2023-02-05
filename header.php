@@ -20,8 +20,7 @@ $blog = esc_url( home_url( '/blog/' ));
 $contact = esc_url( home_url( '/contact/' ));
 ?>
 
-<body>
-  <?php body_class(); ?>>
+<body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <header class="header l-header js-header">
     <div class="header__inner">
