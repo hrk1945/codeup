@@ -3,5 +3,8 @@
 .card__texts {
   padding: 0 rem(22);
   background-color: $white;
+  min-height: rem(120);
+  display: flex;
+  flex-direction: column;
 }
 

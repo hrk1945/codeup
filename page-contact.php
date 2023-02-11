@@ -49,7 +49,7 @@
   </div>
   <!-- ページトップ -->
   <p class="low__pagetop">
-    <a href="./contact.html"> </a>
+    <a href="#"> </a>
   </p>
 </main>
 <?php get_footer(); ?>

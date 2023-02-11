@@ -40,6 +40,7 @@ letter-spacing: 0.1em;
   color: $white;
   font-size: rem(16);
   padding: rem(3) rem(10);
+  
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);
     font-size: rem(16);

@@ -16,7 +16,7 @@
   <div class="low__news">
     <div class="low__news__inner">
       <ul class="low__lists">
-        <li class="current-cat">
+        <li class="list">
           <a class="list__link" href="<?php echo esc_url( get_post_type_archive_link( 'blog' ) ); ?>">すべて</a>
         </li>
         <?php $taxonomy_terms = get_terms( 'blog_category', array( 'hide_empty' => false ) );
@@ -260,7 +260,7 @@
 
   <!-- ページトップ -->
   <p class="low__pagetop">
-    <a href="./works.html"> </a>
+    <a href="#"> </a>
   </p>
 
 </main>

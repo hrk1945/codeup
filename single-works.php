@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <main class="single_page">
+
   <!-- パンクズリスト -->
   <?php get_template_part('breadcrumb'); ?>
-
 
   <!-- 投稿ページ -->
   <?php if (have_posts()): ?>

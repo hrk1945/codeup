@@ -34,35 +34,35 @@
               <span>事業</span>
               <h2>web Creative</h2>
               <p>
-                コーポレートサイト、ブランドサイト、採用サイト、メディアサイト、ECサイトなど多様なwebサイト制作を行っています。ヒアリング、アクセスログ分析、競合調査等を踏まえ、webサイトのあるべき姿を企画·設計し、クライアント様､webサイトの利用者が満足する質の高いwebサイトを構築いたします。
+                コーポレートサイト、採用サイト、メディアサイト、ECサイトなど多様なwebサイト制作を行っています。ヒアリング、アクセスログ分析、競合調査等を踏まえ、webサイトのあるべき姿を企画·設計し、クライアント様､webサイトの利用者が満足する質の高いwebサイトを構築いたします。
               </p>
             </div>
           </div>
           <div class="p-card__contents">
             <div class="p-cards">
-              <a class="p-card" href="">
+              <div class="p-card" href="">
                 <div class="p-card__img">
                   <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-2.png" alt="" />
                 </div>
-                <time datetime="2021-07-20">2021.07.20</time>
+                <time datetime="2021-07-20">2023.04.20</time>
                 <div class="p-card__texts">
-                  <h3>製作実績</h3>
+                  <h3>コーポレートサイト</h3>
                   <p>
                     「信託」というテーマをわかりやすく伝えるために、
                     ユーザーリテラシーに合わせたコンテンツアプローチを実現。
                   </p>
                   <span>コーポレートサイト</span>
                 </div>
-              </a>
+              </div>
             </div>
             <div class="p-cards">
-              <a class="p-card" href="">
+              <div class="p-card" href="">
                 <div class="p-card__img">
                   <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-1.png" alt="" />
                 </div>
-                <time datetime="2021-07-20">2021.07.20</time>
+                <time datetime="2021-07-20">2023.09.12</time>
                 <div class="p-card__texts">
-                  <h3>製作実績</h3>
+                  <h3>キャンペーンサイト</h3>
                   <p>
                     継続的なキャンペーン展開で、
                     ユーザーとのコミュニケーション機会を創出。
@@ -70,7 +70,7 @@
                   </p>
                   <span>キャンペーンサイト</span>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -90,36 +90,34 @@
           </div>
           <div class="p-card__contents">
             <div class="p-cards">
-              <a class="p-card" href="">
+              <div class="p-card" href="">
                 <div class="p-card__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/a-6.png" alt="" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/card-4.png" alt="" />
                 </div>
-                <time datetime="2021-07-20">2021.07.20</time>
+                <time datetime="2021-07-20">2020.11.23</time>
                 <div class="p-card__texts">
-                  <h3>webマーケティング</h3>
+                  <h3>内部ＳＥＯ最適化</h3>
                   <p>
-                    様々な分析からユーザーニーズを捉え、
-                    戦略策定からビジネス貢献できるwebサイトを実現する
+                    Google・Yahooなど検索エンジンに合わせた正しいHTMLでの記述を行います。また、併せてタイトル・ディスクリプションも最適化します。
                   </p>
-                  <span>Marketing</span>
+                  <span>SEO対策</span>
                 </div>
-              </a>
+              </div>
             </div>
             <div class="p-cards">
-              <a class="p-card" href="">
+              <div class="p-card" href="">
                 <div class="p-card__img">
                   <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-4.png" alt="" />
                 </div>
-                <time datetime="2021-07-20">2021.07.20</time>
+                <time datetime="2021-07-20">2020.05.20</time>
                 <div class="p-card__texts">
-                  <h3>webマーケティング</h3>
+                  <h3>クローラビリティの最適化</h3>
                   <p>
-                    様々な分析からユーザーニーズを捉え、
-                    戦略策定からビジネス貢献できるwebサイトを実現、サポートします
+                    サイトマップ・パンくずリストの作成、その他、内部リンクの最適化やURLの正規化を行います。
                   </p>
-                  <span>Marketing</span>
+                  <span>SEO対策</span>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -137,36 +135,35 @@
           </div>
           <div class="p-card__contents">
             <div class="p-cards">
-              <a class="p-card" href="">
+              <div class="p-card" href="">
                 <div class="p-card__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/a-2.png" alt="" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/card-2.png" alt="" />
                 </div>
                 <time datetime="2021-07-20">2021.07.20</time>
                 <div class="p-card__texts">
-                  <h3>ECサイト</h3>
+                  <h3>Webプロモーション</h3>
                   <p>
-                    通販登録会員数 累計1千万人超。
-                    メディカルコスメECサイトの運用業務
+                    お客様に最適なWebプロモーションの戦略を立案し、それに基づいたWeb KPI（Key Performance Indicator = 重要経営指標）を策定します。
                   </p>
-                  <span>メディア運用</span>
+                  <span>デザイン・設計</span>
                 </div>
-              </a>
+              </div>
             </div>
             <div class="p-cards">
-              <a class="p-card" href="">
+              <div class="p-card" href="">
                 <div class="p-card__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/a-2.png" alt="" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-8.png" alt="" />
                 </div>
-                <time datetime="2021-07-20">2021.07.20</time>
+                <time datetime="2021-07-20">2021.12.20</time>
                 <div class="p-card__texts">
-                  <h3>アプリケーション</h3>
+                  <h3>アプリケーション開発</h3>
                   <p>
                     UIの見直しにより利用率とユーザー評価を大きく向上。
                     国内最大音楽イベント公式アプリのクリエイティブを刷新
                   </p>
-                  <span>メディア運用</span>
+                  <span>デザイン・設計</span>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -178,40 +175,40 @@
               <span>事業</span>
               <h2>MEDIA</h2>
               <p>
-                webサイトに掲載するコンテンツの企画·制作、コンサルティングが可能です。集客に寄与する自社のビジネスポリシーの言語化など、経験豊富なwebマーケティングコンサルタント、ディレクターが対応いたします。イラスト制作やマンガ制作、Youtubeに掲載するプロモーション動画の制作もご相談ください。
+                読者のエンゲージメントを高めるためのインタビューコンテンツ制作や、見込み顧客を獲得するためのSEOコンテンツ制作など、集客、コンバージョン、ブランディングに至るまで、様々な目的に応じた最適なコンテンツ制作を支援いたします。
               </p>
             </div>
           </div>
           <div class="p-card__contents">
             <div class="p-cards">
-              <a class="p-card" href="">
+              <div class="p-card" href="">
                 <div class="p-card__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/a-2.png" alt="" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/card-3.png" alt="" />
                 </div>
                 <time datetime="2021-07-20">2021.07.20</time>
                 <div class="p-card__texts">
-                  <h3>取材</h3>
+                  <h3>運営サポート</h3>
                   <p>
-                    webサイト運用の中でテストと評価を繰り返し、効果を計測しながら改善提案を行い、継続的な運用のサポートを行います。
+                    SNS広告やSEM施策と組み合わせたり、クロスメディア戦略を構築したりと、最適なオウンドメディア運用のためのメディア戦略をご提案、実施が可能です。
                   </p>
-                  <span>メディア運用</span>
+                  <span>クロスメディア戦略</span>
                 </div>
-              </a>
+              </div>
             </div>
             <div class="p-cards">
-              <a class="p-card" href="">
+              <div class="p-card" href="">
                 <div class="p-card__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/a-2.png" alt="" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-3.png" alt="" />
                 </div>
-                <time datetime="2021-07-20">2021.07.20</time>
+                <time datetime="2022-03-20">2022.03.20</time>
                 <div class="p-card__texts">
-                  <h3>取材</h3>
+                  <h3>コンテンツ製作</h3>
                   <p>
-                    効果を計測しながら改善提案を行い、継続的な運用のサポートを行います。
+                    社内外に500名以上のライターネットワークがあり、各ジャンルにおいて最適なライターを起用することが可能です。
                   </p>
-                  <span>メディア運用</span>
+                  <span>コンバージョン</span>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -229,7 +226,7 @@
           </div>
           <div class="p-card__contents">
             <div class="p-cards">
-              <a class="p-card" href="">
+              <div class="p-card" href="">
                 <div class="p-card__img">
                   <img src="<?php echo get_template_directory_uri(); ?>/images/common/a-2.png" alt="" />
                 </div>
@@ -241,12 +238,12 @@
                   </p>
                   <span>CMS構築</span>
                 </div>
-              </a>
+              </div>
             </div>
             <div class="p-cards">
-              <a class="p-card" href="">
+              <div class="p-card" href="">
                 <div class="p-card__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/a-2.png" alt="" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/swiper-3.png" alt="" />
                 </div>
                 <time datetime="2021-07-20">2021.07.20</time>
                 <div class="p-card__texts">
@@ -256,7 +253,7 @@
                   </p>
                   <span>CMS構築</span>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -269,7 +266,7 @@
 
   <!-- ページトップ -->
   <p class="low__pagetop">
-    <a href="./philosophy.html"> </a>
+    <a href="#"> </a>
   </p>
 </main>
 <?php get_footer(); ?>

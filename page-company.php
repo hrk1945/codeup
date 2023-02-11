@@ -48,7 +48,7 @@
 
   <!-- ページトップ -->
   <p class="low__pagetop">
-    <a href="./company.html"> </a>
+    <a href="#"> </a>
   </p>
 </main>
 

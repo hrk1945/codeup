@@ -102,3 +102,23 @@
   margin-left: rem(12);
 }
 
+.prev a {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(20);
+  }
+  font-size: rem(10);
+}
+.next a {
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(20);
+  }
+  font-size: rem(10);
+}
+.prev a:hover {
+  opacity: 0.2;
+}
+.next a:hover {
+  opacity: 0.2;
+}

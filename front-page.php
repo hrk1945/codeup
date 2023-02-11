@@ -54,13 +54,13 @@ $contact = esc_url( home_url( '/contact/' ));
 
       <h2 class="group__title">
         <a href="<?php the_permalink(); ?>">
-          <?php echo get_the_content(); ?>
+          <?php the_title(); ?>
         </a>
       </h2>
     </div>
     <?php endwhile; wp_reset_postdata(); endif; ?>
     <div class="section__btn">
-      <a class="btn btn-group" href="<?php echo esc_url( home_url( '/news/' )); ?>">すべて見る</a>
+      <a class="btn btn-group" href="<?php echo esc_url( home_url( '/news/' )); ?>">一覧</a>
     </div>
   </div>
 
@@ -80,7 +80,7 @@ $contact = esc_url( home_url( '/contact/' ));
             </a>
           </div>
           <div class="content__text">
-            <p class="content__text-nowrap">経営理念ページへ</p>
+            <p class="content__text-nowrap">web consulting</p>
           </div>
         </div>
         <div class="content__item">
@@ -139,11 +139,14 @@ $contact = esc_url( home_url( '/contact/' ));
             <div class="swiper-wrapper">
               <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
               <div class="swiper-slide">
-                <?php if (has_post_thumbnail()): ?>
-                <?php the_post_thumbnail('full'); ?>
-                <?php else: ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-4.png" alt="" />
-                <?php endif; ?>
+                <a href="<?php the_permalink(); ?>">
+
+                  <?php if (has_post_thumbnail()): ?>
+                  <?php the_post_thumbnail('full'); ?>
+                  <?php else: ?>
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-4.png" alt="" />
+                  <?php endif; ?>
+                </a>
               </div>
               <?php endwhile; wp_reset_postdata(); endif; ?>
 
@@ -159,8 +162,8 @@ $contact = esc_url( home_url( '/contact/' ));
           </div>
           <div class="works__text section__text">
             <p>
-              webサイトの制作とコンサルティングを通じて、
-              企業様のビジネス課題を解決いたします。
+              コーポレートサイト、採用サイト、メディアサイト、ECサイトなど多様なwebサイト制作を行っています。ヒアリング、アクセスログ分析、競合調査等を踏まえ、webサイトのあるべき姿を企画·設計し、クライアント様､webサイトの利用者が満足する質の高いwebサイトを構築いたします。
+
             </p>
           </div>
           <div class="section__btn">
@@ -217,7 +220,7 @@ $contact = esc_url( home_url( '/contact/' ));
     <div class="card__section" data-aos="fade-up">
       <div class="blog__cards">
         <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-        <a class="blog__card" href="./blog.html">
+        <a class="blog__card" href="<?php echo esc_url( home_url( '/blog/' )); ?>">
           <div class="card__inner">
             <div class="card__img">
               <?php if (has_post_thumbnail()): ?>
@@ -259,7 +262,6 @@ $contact = esc_url( home_url( '/contact/' ));
       <a class="btn" href="<?php echo esc_url( home_url( '/blog/' )); ?>">詳しく見る</a>
     </div>
   </section>
-
 
 
 </main>

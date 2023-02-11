@@ -30,7 +30,7 @@ $contact = esc_url( home_url( '/contact/' ));
 <?php endif;?> -->
 <!-- ページトップ -->
 <p class="pagetop">
-  <a href="./index.html"> </a>
+  <a href="#"> </a>
 </p>
 
 <footer class="footer sp-footer">

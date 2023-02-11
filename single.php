@@ -39,10 +39,10 @@
         <div class="link_inner">
           <div class="link_flex">
             <div class="prev">
-              <?php previous_post_link('&laquo; %link', '%title'); ?>
+              <?php previous_post_link('&laquo; %link', '前の記事'); ?>
             </div>
             <div class="next">
-              <?php next_post_link('%link &raquo;', '%title'); ?>
+              <?php next_post_link('%link &raquo;', '次の記事'); ?>
             </div>
           </div>
           <div class="link_archive">

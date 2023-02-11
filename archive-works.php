@@ -16,7 +16,7 @@
   <div class="low__news">
     <div class="low__news__inner">
       <ul class="low__lists">
-        <li class="current-cat">
+        <li class="list">
           <a class="list__link" href="<?php echo esc_url( get_post_type_archive_link( 'works' ) ); ?>">すべて</a>
         </li>
         <?php
@@ -69,40 +69,6 @@
   <p class="low__pagetop">
     <a href="./works.html"> </a>
   </p>
-  <!-- <a class="work__achieve" href="#">
-        <div class="achieve__img">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-4.png" alt="" />
-        </div>
-        <p class="achieve__copy">コーポレート</p>
-        <h2 class="achieve__title">シノハラ株式会社</h2>
-      </a>
-      <a class="work__achieve" href="#">
-        <div class="achieve__img">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/common/a-5.png" alt="" />
-        </div>
-        <p class="achieve__copy">ECサイト</p>
-        <h2 class="achieve__title">hiroki shinohara</h2>
-      </a>
-      <a class="work__achieve" href="#">
-        <div class="achieve__img">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/common/works-2.png" alt="" />
-        </div>
-        <p class="achieve__copy">web コンサルティング</p>
-        <h2 class="achieve__title">株式会社篠原大輝</h2>
-      </a>
-      <a class="work__achieve" href="#">
-        <div class="achieve__img">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-8.png" alt="" />
-        </div>
-        <p class="achieve__copy">キャンペーン</p>
-        <h2 class="achieve__title">株式会社コーディング</h2>
-      </a>
-      <a class="work__achieve" href="#">
-        <div class="achieve__img">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/common/a-6.png" alt="" />
-        </div>
-        <p class="achieve__copy">SEO対策</p>
-        <h2 class="achieve__title">良いデザイン株式会社</h2>
-      </a> -->
+
 </main>
 <?php get_footer(); ?>

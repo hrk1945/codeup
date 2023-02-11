@@ -13,7 +13,6 @@
 .philosophy__content {
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);
-
     width: 50%;
   }
   color: aliceblue;
@@ -41,9 +40,12 @@
   margin-right: auto;
   max-width: rem(600);
   text-align: center;
+  min-height: rem(200);
+  display: flex;
+  flex-direction: column;
 }
 .p-titles p {
-  margin-top: rem(30);
+  margin-top: auto;
   text-align: initial;
 }
 
@@ -84,6 +86,12 @@
   font-size: rem(12);
 }
 
+.p-card__texts {
+  display: flex;
+  flex-direction: column;
+  min-height: rem(200);
+}
+
 .p-card__texts p {
   margin-top: rem(30);
 }
@@ -93,7 +101,7 @@
 }
 .p-card__texts span {
   display: inline-block;
-  margin-top: rem(20);
+  margin-top: auto;
   padding: rem(8) rem(6);
   background-color: gray;
   color: $white;
@@ -102,15 +110,9 @@
   margin-top: rem(20);
 }
 
-.p-cards:hover .p-card img {
-  transform: scale(1.2);
-  transition: all 0.3s;
-}
-.p-cards:hover .p-card__texts {
-  opacity: 0.4;
-  transition: all 0.3s;
-}
 
-.p-card__img {
-  overflow: hidden;
+
+.p-card__img img {
+aspect-ratio: 364/242;
+
 }

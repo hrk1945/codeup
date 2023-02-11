@@ -1,12 +1,14 @@
 @use "global" as *;
 .group {
   width: 100%;
-  margin-top: rem(29);
+  margin-top: rem(40);
   padding: 0 rem(20);
+  align-items: center;
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);
     display: flex;
     justify-content: center;
     padding: 0;
+    align-items: center;
   }
 }
