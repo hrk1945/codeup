@@ -1,13 +1,11 @@
 @use "global" as *;
 
-.low__news{
+.low__news {
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);
     margin-top: rem(99);
   }
-
 }
-
 
 .low__news__inner {
   max-width: rem(1130);
@@ -27,6 +25,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .list__link--white {
   background-color: $white;
 }
@@ -36,18 +35,16 @@
 }
 
 .list__link {
-letter-spacing: 0.1em;
+  letter-spacing: 0.1em;
   color: $white;
   font-size: rem(16);
   padding: rem(3) rem(10);
-  
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);
     font-size: rem(16);
     letter-spacing: rem(2);
   }
 }
-
 .list {
   margin-left: rem(24);
   font-size: rem(16);
@@ -58,17 +55,22 @@ letter-spacing: 0.1em;
     margin-left: rem(40);
   }
 }
-.low__blog {
-  margin-top: rem(70);
+.low__news.home .list__link {
+  margin-left: rem(24);
+  font-size: rem(16);
+  margin-top: rem(16);
 
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);
-
-    margin-top: rem(99);
+    font-size: rem(16);
+    margin-left: rem(40);
   }
 }
+.low__news.home .list {
+  display: none;
+}
 
-.list__link:hover{
+.list__link:hover {
   background-color: $white;
   color: $black;
 }

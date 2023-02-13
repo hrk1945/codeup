@@ -6,11 +6,47 @@
     margin-top: rem(150);
   }
 }
+.contact__inner {
+  background-color: #3d3d3d;
+  padding: 0 rem(22);
+}
+
+.contact__text {
+  margin-top: rem(20);
+  font-size: rem(16);
+  letter-spacing: 0.12em;
+  text-align: initial;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(16);
+    text-align: center;
+    padding-top: rem(9);
+  }
+}
+.contact__contents {
+  text-align: center;
+  color: #ffffff;
+  padding-top: rem(67);
+  padding-bottom: rem(64);
+  @include mq("md") {
+    padding-top: rem(67);
+    padding-bottom: rem(64);
+    font-size: vw(strip-unit($inner), 10);
+    padding-bottom: rem(149);
+    padding-top: rem(148);
+  }
+}
 
 .contact.section--contents::before {
   content: "";
   display: none;
 }
 
-
-
+.contact-group {
+  margin-top: rem(70);
+  padding: 0 rem(20);
+}
+.section__btn.section__btn-contact {
+  text-align: center;
+  padding-top: rem(27);
+}

@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  <!-- 理念こんてんつ -->
+  <!-- 理念コンテンツ -->
   <div class="philosophy__contents">
     <div class="p-inner">
       <div class="philosophy__content">

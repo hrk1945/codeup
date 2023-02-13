@@ -20,17 +20,12 @@
       </div>
       <h2 class="single_title category">
         <?php the_title(); ?></h2>
-
-
-
-
       <?php endwhile; endif; ?>
 
 
       <!-- ページネーション(前へ・次へをテキスト) -->
       <div class="page_link">
         <div class="link_inner">
-
           <div class="link_archive">
             <a href="<?php echo esc_url( home_url( '/news/' )); ?>">一覧へ</a>
           </div>

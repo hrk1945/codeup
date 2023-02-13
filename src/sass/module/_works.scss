@@ -1,8 +1,5 @@
 @use "global" as *;
 
-.works.section--works {
-  position: relative;
-}
 .works.section--contents::before {
   content: "";
   width: 100%;

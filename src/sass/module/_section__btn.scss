@@ -17,7 +17,7 @@
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);
     text-align: initial;
-margin-top: 0;
+    margin-top: 0;
     margin-left: rem(48);
   }
 }

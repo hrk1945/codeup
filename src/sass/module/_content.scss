@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.content__items {
+  margin-top: rem(48);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content__items-text p {
+  font-size: rem(20);
+  font-weight: 400;
+  color: $white;
+  letter-spacing: rem(2);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(25);
+    letter-spacing: rem(2);
+  }
+}
+.content__item {
+  width: 50%;
+  position: relative;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    width: 25%;
+  }
+}
+.content__img img {
+  aspect-ratio: 188/168;
+  height: 100%;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    aspect-ratio: 319/320;
+  }
+}
+
+.content__hover:after {
+  content: "";
+  display: block;
+  background-color: #ffffff;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transition: 0.3s;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+  }
+}
+.content__hover:hover:after {
+  opacity: 60%;
+}
+.content__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content__text p {
+  font-size: rem(20);
+  font-weight: 300;
+  color: $white;
+  letter-spacing: rem(2);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(25);
+    letter-spacing: rem(2);
+  }
+}
+.content__text-nowrap {
+  white-space: nowrap;
+}

@@ -12,6 +12,9 @@
     height: rem(31);
   }
 }
+.logo__title {
+  z-index: 3;
+}
 
 .footer .logo {
   width: rem(70);
@@ -27,6 +30,6 @@
   }
 }
 
-.footer__list a:hover{
+.footer__list a:hover {
   border-bottom: 1px solid #fff;
 }

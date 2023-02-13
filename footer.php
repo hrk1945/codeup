@@ -1,4 +1,4 @@
-<!-- 変数たち -->
+<!-- navリスト変数 -->
 <?php
 $top = esc_url( home_url( '/' ));
 $news = esc_url( home_url( '/news/' ));
@@ -65,7 +65,7 @@ $contact = esc_url( home_url( '/contact/' ));
 <footer class="footer l-footer">
   <div class="footer__inner">
     <h2 class="footer__logo logo">
-      <a class="logo__title" href="./index.html">
+      <a class="logo__title" href="<?php echo $top; ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/images/common/logo.png" alt="" />
       </a>
     </h2>

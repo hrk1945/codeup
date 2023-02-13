@@ -2,23 +2,23 @@
 
 .mv {
   position: relative;
+  height: 100vh;
   z-index: 10;
   overflow: hidden;
-  height: 100vh;
 }
 .mv:after {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #c4c4c4;
   width: 100vw;
   height: 100vh;
+  background-color: #c4c4c4;
 }
 
 .mv__img {
   position: absolute;
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   object-fit: cover;
   animation: anime 21s 0s infinite;
   opacity: 0;
@@ -55,5 +55,45 @@
 
   100% {
     opacity: 0;
+  }
+}
+
+.mv__copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  color: $white;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  transform: translate(-50%, -50%);
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(50);
+    line-height: 1;
+  }
+}
+
+.mv__title {
+  font-size: rem(28);
+  font-weight: bold;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(50);
+    line-height: 1;
+  }
+}
+.mv__sub-title {
+  font-size: rem(20);
+  font-weight: bold;
+  padding-bottom: rem(5);
+  margin-top: rem(23);
+  line-height: 1;
+  letter-spacing: 0.025em;
+  @include mq("md") {
+    font-size: vw(strip-unit($inner), 10);
+    font-size: rem(25);
+    margin-top: rem(24);
+    line-height: 1;
   }
 }

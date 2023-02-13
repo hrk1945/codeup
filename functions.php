@@ -26,15 +26,13 @@ add_action('after_setup_theme', 'my_setup');
 
 
 
-/**
- * CSSとJavaScriptの読み込み
- */
+
 function my_script_init() {
-	// WordPress提供のjquery.jsを読み込まない
+
 	wp_deregister_script('jquery');
-	// jQueryの読み込み
+
 	wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.6.0.min.js', "", "1.0.1");
-	// Google Fonts(2つ以上ある場合は1つずつ書く)
+	
 	wp_enqueue_style('NotoSans', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&display=swap');
 	// swiper
 	wp_enqueue_script('swiper', '//unpkg.com/swiper@8/swiper-bundle.min.js', "", "1.0.1", false);
@@ -54,47 +52,6 @@ add_action('wp_enqueue_scripts', 'my_script_init');
 
 
 
-
-/**
- * メニューの登録
- *
- * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/register_nav_menus
- */
-// function my_menu_init() {
-// 	register_nav_menus(
-// 		array(
-// 			'global'  => 'ヘッダーメニュー',
-// 			'utility' => 'ユーティリティメニュー',
-// 			'drawer'  => 'ドロワーメニュー',
-// 		)
-// 	);
-// }
-// add_action( 'init', 'my_menu_init' );
-/**
- * メニューの登録
- *
- * 参考：https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/register_nav_menus
- */
-
-
-/**
- * ウィジェットの登録
- *
- * @codex http://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/register_sidebar
- */
-// function my_widget_init() {
-// 	register_sidebar(
-// 		array(
-// 			'name'          => 'サイドバー',
-// 			'id'            => 'sidebar',
-// 			'before_widget' => '<div id="%1$s" class="p-widget %2$s">',
-// 			'after_widget'  => '</div>',
-// 			'before_title'  => '<div class="p-widget__title">',
-// 			'after_title'   => '</div>',
-// 		)
-// 	);
-// }
-// add_action( 'widgets_init', 'my_widget_init' );
 
 
 /**
@@ -173,6 +130,4 @@ add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 function wpcf7_autop_return_false() {
   return false;
 }
-
-
-// パンクズ最下層非表示
+?>

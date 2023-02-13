@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main>
+<main class="single^blog">
   <!-- パンクズリスト -->
   <?php get_template_part('breadcrumb'); ?>
 
@@ -11,8 +11,9 @@
     <div class="single_inner">
       <h2 class="single_title">
         <?php the_title(); ?></h2>
+
       <div class="single_img">
-        <?php if (has_post_thumbnail()): ?>
+        <?php if (has_post_thumbnail()):?>
 
         <?php the_post_thumbnail(); ?>
         <?php endif; ?>
@@ -41,9 +42,6 @@
           </div>
         </div>
       </div>
-
-
-
       <?php endwhile; endif; ?>
 
     </div>

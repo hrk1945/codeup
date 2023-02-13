@@ -1,13 +1,10 @@
 // ハンバーガー
 $(function () {
   $("#js-hamburger").click(function () {
-    //toggleClassでclassをつけたり外したりする
     $("body").toggleClass("is-drawerActive");
 
-    //attr()でaria-expandedがfalseの場合、thisはクリックした要素そのもの
     if ($(this).attr("aria-expanded") == "false") {
       $(this).attr("aria-expanded", "true");
-      //jQueryでcss操作、アニメーションにはdisplayではなく、visibilityを使う
       $("#js-global-menu").css("visibility", "visible");
       $("#js-global-menu").attr("aria-hidden", "false");
     } else {
@@ -63,7 +60,7 @@ $(function () {
   });
 });
 
-// スワイパーページネーション
+// トップページのスワイパーページネーション
 const swiper = new Swiper(".swiper", {
   loop: true,
   speed: 3000,
@@ -82,39 +79,32 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// ローディング
+// ローディング画面
 
 $(function () {
   setTimeout(function () {
     $(".loading p1").fadeIn(1600);
-  }, 500); //0.5秒後にロゴをフェードイン!
+  }, 500); //0.5秒後にロゴをフェードイン
   setTimeout(function () {
     $(".loading").fadeOut(500);
-  }, 5500); //5.5秒後にロゴ含め真っ白背景をフェードアウト！
+  }, 5500); //5.5秒後にロゴ含め真っ白背景をフェードアウト
 });
 // $(function () {
 //   setTimeout(function () {
 //     $(".loading p1").fadeOut(00);
-//   }, 000); //0.5秒後にロゴをフェードイン!
+//   }, 000); //0.5秒後にロゴをフェードイン
 //   setTimeout(function () {
 //     $(".loading p1").fadeIn(1600);
-//   }, 3500); //5.5秒後にロゴ含め真っ白背景をフェードアウト！
+//   }, 3500); //5.5秒後にロゴ含め真っ白背景をフェードアウト
 // });
 
 // AOS
 AOS.init({
-  // offset: 100,
   delay: 200,
   duration: 800,
-  // easing: "ease-out",
-  // anchorPlacement: "bottom-top",
-  // once: false,
 });
 
-
-
 // 下層スワイパー
-
 var swiper1 = new Swiper(".swiper1", {
   loop: true,
   effect: "coverflow",

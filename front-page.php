@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<!-- 変数たち -->
+<!-- navリスト変数 -->
 <?php
 $top = esc_url( home_url( '/' ));
 $news = esc_url( home_url( '/news/' ));
@@ -15,13 +15,13 @@ $contact = esc_url( home_url( '/contact/' ));
   <!-- 以下mv -->
   <div class="mv">
     <div class="mv__img">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/common/mv-1.png" alt="" />
+      <img src="<?php echo get_template_directory_uri(); ?>/images/common/mv-1.png" alt="WEB DESIGN CODEUPS" />
     </div>
     <div class="mv__img">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/common/mv-2.png" alt="" />
+      <img src="<?php echo get_template_directory_uri(); ?>/images/common/mv-2.png" alt="WEB DESIGN CODEUPS" />
     </div>
     <div class="mv__img">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/common/mv-3.png" alt="" />
+      <img src="<?php echo get_template_directory_uri(); ?>/images/common/mv-3.png" alt="WEB DESIGN CODEUPS" />
     </div>
 
     <div class="mv__copy active">
@@ -33,12 +33,12 @@ $contact = esc_url( home_url( '/contact/' ));
   <!-- グループ -->
 
   <?php
-  $args = array( 
+    $args = array( 
     'post_type' => 'post',
     'posts_per_page' => 1,
- ); 
-  $the_query = new WP_Query($args); if($the_query->have_posts()):
-?>
+   ); 
+   $the_query = new WP_Query($args); if($the_query->have_posts()):
+   ?>
   <div id="group" class="group l-group">
     <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
     <div class="group__inner">
@@ -47,7 +47,7 @@ $contact = esc_url( home_url( '/contact/' ));
           <time datetime="<?php the_time('c')?>"> <?php the_time('Y/m/d')?></time>
         </div>
         <div class="group__btn">
-          <a href="#"> <?php $cat = get_the_category();
+          <a href="<?php the_permalink(); ?>"> <?php $cat = get_the_category();
             $cat = $cat[0]; { echo $cat->name; } ?></a>
         </div>
       </div>
@@ -60,13 +60,13 @@ $contact = esc_url( home_url( '/contact/' ));
     </div>
     <?php endwhile; wp_reset_postdata(); endif; ?>
     <div class="section__btn">
-      <a class="btn btn-group" href="<?php echo esc_url( home_url( '/news/' )); ?>">一覧</a>
+      <a class="btn btn-group" href="<?php echo esc_url( home_url( '/news/' )); ?>">一覧へ</a>
     </div>
   </div>
 
 
   <!-- コンテント -->
-  <section id="content" class="content section--contents">
+  <section class="content section--contents" id="content">
     <div class="content__inner">
       <div class="section__titles">
         <h2 class="content__title section__title">事業内容</h2>
@@ -134,6 +134,7 @@ $contact = esc_url( home_url( '/contact/' ));
     </div>
     <div class="works__inner section__inner" data-aos="fade-up">
       <div class="works__contents section__contents">
+        <!-- スワイパー -->
         <div class="container">
           <div class="swiper">
             <div class="swiper-wrapper">
@@ -144,7 +145,7 @@ $contact = esc_url( home_url( '/contact/' ));
                   <?php if (has_post_thumbnail()): ?>
                   <?php the_post_thumbnail('full'); ?>
                   <?php else: ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-4.png" alt="" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-img.png" alt="" />
                   <?php endif; ?>
                 </a>
               </div>
@@ -163,7 +164,6 @@ $contact = esc_url( home_url( '/contact/' ));
           <div class="works__text section__text">
             <p>
               コーポレートサイト、採用サイト、メディアサイト、ECサイトなど多様なwebサイト制作を行っています。ヒアリング、アクセスログ分析、競合調査等を踏まえ、webサイトのあるべき姿を企画·設計し、クライアント様､webサイトの利用者が満足する質の高いwebサイトを構築いたします。
-
             </p>
           </div>
           <div class="section__btn">
@@ -209,9 +209,9 @@ $contact = esc_url( home_url( '/contact/' ));
      'post_type' => 'blog',
      'posts_per_page' => 3,
       );  
-   $the_query = new WP_Query($args); if($the_query->have_posts()):
-  ?>
-  <section id="blog" class="blog section--contents">
+      $the_query = new WP_Query($args); if($the_query->have_posts()):
+    ?>
+  <section id="blog" class="blog        section--contents">
     <div class="section__titles">
       <h2 class="blog__title section__title">ブログ</h2>
       <span class="blog__sub-title sub-title">Blog</span>
@@ -226,7 +226,7 @@ $contact = esc_url( home_url( '/contact/' ));
               <?php if (has_post_thumbnail()): ?>
               <?php the_post_thumbnail('full'); ?>
               <?php else: ?>
-              <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-4.png" alt="" />
+              <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-img.png" alt="" />
               <?php endif; ?>
             </div>
             <div class="card__texts">
@@ -234,13 +234,13 @@ $contact = esc_url( home_url( '/contact/' ));
                 <h2><?php the_title(); ?></h2>
               </div>
               <div class="card__text">
-                <p>
-                  <?php echo get_the_content(); ?>
-                </p>
+                <?php remove_filter ('the_content', 'wpautop'); ?>
+
+                <?php echo wp_trim_words( get_the_content(), 10, '…' ); ?>
               </div>
               <div class="card__flex">
                 <p><?php
-						  $taxonomy_terms = get_the_terms($post->ID, 'works_category'); 
+						  $taxonomy_terms = get_the_terms($post->ID, 'blog_category'); 
 						  if ( $taxonomy_terms ) {
 						    echo '<span>'.$taxonomy_terms[0]->name.'</span>';
 						  }
@@ -250,7 +250,7 @@ $contact = esc_url( home_url( '/contact/' ));
               </div>
             </div>
           </div>
-          <div class="overview__new-icon">
+          <div class="blog__new-icon">
             <img src="<?php echo get_template_directory_uri(); ?>/images/common/Newアイコン.png" alt="" />
           </div>
         </a>

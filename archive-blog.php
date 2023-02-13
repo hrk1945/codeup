@@ -47,7 +47,7 @@
                 <?php if (has_post_thumbnail()): ?>
                 <?php the_post_thumbnail('full'); ?>
                 <?php else: ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-4.png" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-img.png" alt="" />
                 <?php endif; ?>
               </div>
               <div class="card__texts">
@@ -55,9 +55,10 @@
                   <h2><?php the_title(); ?></h2>
                 </div>
                 <div class="card__text">
-                  <p>
-                    <?php echo get_the_content(); ?>
-                  </p>
+                  <?php remove_filter ('the_content', 'wpautop'); ?>
+
+                  <?php echo wp_trim_words( get_the_content(), 10, '…' ); ?>
+
                 </div>
                 <div class="card__flex">
                   <p><?php
@@ -75,178 +76,6 @@
 
           </a>
           <?php endwhile; endif; ?>
-          <!-- <a class="blog__card" href="./blog.html">
-            <div class="card__inner">
-              <div class="card__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-2.png" alt="" />
-              </div>
-              <div class="card__texts">
-                <div class="card__title">
-                  <h2>WEBデザイナーの募集開始</h2>
-                </div>
-                <div class="card__text">
-                  <p>
-                    自分の能力と裁量を大きくしていきたい。そうした希望をお持ちの方は大歓迎です。
-                  </p>
-                </div>
-                <div class="card__flex">
-                  <p>採用情報</p>
-                  <time datetime="2021-07-20">2022.11.06</time>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a class="blog__card" href="./blog.html">
-            <div class="card__inner">
-              <div class="card__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-3.png" alt="" />
-              </div>
-              <div class="card__texts">
-                <div class="card__title">
-                  <h2>「健康経営優良法人2020」に認定</h2>
-                </div>
-                <div class="card__text">
-                  <p>
-                    経済産業省によりCODE
-                    UPSが「健康経営優良法人2020」に認定されました。
-                  </p>
-                </div>
-                <div class="card__flex">
-                  <p>会社広報</p>
-                  <time datetime="2021-07-20">2021.07.20</time>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a class="blog__card" href="./blog.html">
-            <div class="card__inner">
-              <div class="card__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-4.png" alt="" />
-              </div>
-              <div class="card__texts">
-                <div class="card__title">
-                  <h2>年末年始の営業について。</h2>
-                </div>
-                <div class="card__text">
-                  <p>
-                    今年も残すところあと僅かになりました。体調に気をつけてください。
-                  </p>
-                </div>
-                <div class="card__flex">
-                  <p>会社広報</p>
-
-                  <time datetime="2021-07-20">2021.07.20</time>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="blog__card" href="./blog.html">
-            <div class="card__inner">
-              <div class="card__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-5.png" alt="" />
-              </div>
-              <div class="card__texts">
-                <div class="card__title">
-                  <h2>コーポレートサイト公開</h2>
-                </div>
-                <div class="card__text">
-                  <p>
-                    株式会社篠原のコーポレートサイトを実績に追加しました。
-                  </p>
-                </div>
-                <div class="card__flex">
-                  <p>会社広報</p>
-                  <time datetime="2021-07-20">2021.07.20</time>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a class="blog__card" href="./blog.html">
-            <div class="card__inner">
-              <div class="card__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-6.png" alt="" />
-              </div>
-              <div class="card__texts">
-                <div class="card__title">
-                  <h2>社内インタビュー</h2>
-                </div>
-                <div class="card__text">
-                  <p>経理担当へインタビューを実施いたしました。</p>
-                </div>
-                <div class="card__flex">
-                  <p>会社広報</p>
-                  <time datetime="2021-07-20">2021.07.20</time>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a class="blog__card" href="./blog.html">
-            <div class="card__inner">
-              <div class="card__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-7.png" alt="" />
-              </div>
-              <div class="card__texts">
-                <div class="card__title">
-                  <h2>コロナウイルス対策について。</h2>
-                </div>
-                <div class="card__text">
-                  <p>
-                    詳細はPDFにてご確認ください。体調に気をつけてください。
-                  </p>
-                </div>
-                <div class="card__flex">
-                  <p>会社広報</p>
-
-                  <time datetime="2021-07-20">2021.07.20</time>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a class="blog__card" href="./blog.html">
-            <div class="card__inner">
-              <div class="card__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-8.png" alt="" />
-              </div>
-              <div class="card__texts">
-                <div class="card__title">
-                  <h2>新事業を開始致します。</h2>
-                </div>
-                <div class="card__text">
-                  <p>
-                    Analytics、Googleタグマネージャー、Googleデータポータルの設計や設定
-                  </p>
-                </div>
-                <div class="card__flex">
-                  <p>会社広報</p>
-                  <time datetime="2021-07-20">2021.07.20</time>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a class="blog__card" href="./blog.html">
-            <div class="card__inner">
-              <div class="card__img">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/common/blog-9.png" alt="" />
-              </div>
-              <div class="card__texts">
-                <div class="card__title">
-                  <h2>役員制度について。</h2>
-                </div>
-                <div class="card__text">
-                  <p>今年の役員及び人事異動についてのご説明致します。</p>
-                </div>
-                <div class="card__flex">
-                  <p>会社広報</p>
-                  <time datetime="2021-07-20">2021.07.20</time>
-                </div>
-              </div>
-            </div>
-          </a> -->
         </div>
       </div>
     </div>

@@ -3,10 +3,6 @@
 $color01: #ffffff;
 $color02: #fff;
 
-body {
-  margin: 0;
-  box-sizing: border-box;
-}
 .hamburger {
   display: inline-block;
   text-decoration: none;
@@ -29,7 +25,7 @@ body {
   height: inherit;
   right: rem(0);
   z-index: 3;
-  width: 48px;
+  width: rem(48);
   outline: none;
 
   @include mq("md") {
@@ -40,13 +36,13 @@ body {
 
 .hamburger__line {
   position: absolute;
-  top: rem(-9);
+  top: rem(0);
   right: rem(18);
   bottom: 0;
   left: 0;
   margin: auto;
   width: rem(24);
-  height: 2px;
+  height: rem(1);
   background-color: $color01;
   -webkit-transition: inherit;
   transition: .4s;
@@ -88,6 +84,9 @@ body {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+.is-drawerActive {
+  position: fixed;
 }
 
 .sp-list {

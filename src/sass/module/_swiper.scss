@@ -19,17 +19,12 @@
 .swiper-slide img {
   height: auto;
   width: 100%;
+  aspect-ratio: 557/389;
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);
-    aspect-ratio: 557/389;
   }
 }
 
-/* 次への矢印 */
-// .swiper-button-next {
-//   right: -30px;
-// }
-/* ページネーション */
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
@@ -44,7 +39,7 @@
 }
 
 .swiper-button-prev {
-  left: -30px;
+  left: rem(-30);
 }
 .swiper-pagination-bullet {
   background-color: #f9f871;

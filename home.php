@@ -14,18 +14,18 @@
   <?php get_template_part('breadcrumb'); ?>
 
   <!-- ニュース -->
-  <div class="low__news">
+  <div class="low__news home">
     <div class="low__news__inner">
       <ul class="low__lists">
-        </li>
         <li class="list">
-          <div class="list__link" href=""></div>
-          <?php
+          <a class="list__link" href="">
+            <?php
         $args = array(
        'title_li' => '', // デフォルトの「カテゴリー」を非表示
         'show_option_all' => 'すべて', // 全カテゴリーに表示する文字(空欄にすると全カテゴリーのメニューが非表示)
          'echo'     => 0,
         );
+
          $categories = wp_list_categories( $args );
         $cat_serch  = '"cat-item'; // 変換前の文字列(変更不要)
           $cat_replace = '"list__link'; // 変換後の文字列(liタグに付与したいclass名を書く)
@@ -35,6 +35,8 @@
         } // 'tab-menu'には変換後の文字列で書いたclass名を書く
          echo $categories;
           ?>
+          </a>
+        </li>
       </ul>
     </div>
   </div>

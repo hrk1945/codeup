@@ -9,7 +9,7 @@
   <?php wp_head(); ?>
 </head>
 
-<!-- 変数たち -->
+<!-- navリスト変数 -->
 <?php
 $top = esc_url( home_url( '/' ));
 $news = esc_url( home_url( '/news/' ));
