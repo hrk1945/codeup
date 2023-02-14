@@ -14,23 +14,25 @@
           <time datetime="<?php the_time('c')?>"> <?php the_time('Y/m/d')?></time>
         </div>
         <div class="group__btn">
-          <a href="#"> <?php $cat = get_the_category();
+          <a href="<?php the_permalink(); ?>"> <?php $cat = get_the_category();
             $cat = $cat[0]; { echo $cat->name; } ?></a>
         </div>
       </div>
       <h2 class="single_title category">
-        <?php the_title(); ?></h2>
-      <?php endwhile; endif; ?>
+        <a href="<?php the_permalink(); ?>">
+          <?php the_title(); ?>
+        </a>
+        <?php endwhile; endif; ?>
 
 
-      <!-- ページネーション(前へ・次へをテキスト) -->
-      <div class="page_link">
-        <div class="link_inner">
-          <div class="link_archive">
-            <a href="<?php echo esc_url( home_url( '/news/' )); ?>">一覧へ</a>
+        <!-- ページネーション(前へ・次へをテキスト) -->
+        <div class="page_link">
+          <div class="link_inner">
+            <div class="link_archive">
+              <a href="<?php echo esc_url( home_url( '/news/' )); ?>">一覧へ</a>
+            </div>
           </div>
         </div>
-      </div>
 
 
 

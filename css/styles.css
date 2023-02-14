@@ -2536,6 +2536,7 @@ select::-ms-expand {
 .link_inner {
   margin-top: 50px;
   margin-top: 3.125rem;
+  text-align: center;
 }
 
 .link_flex {
@@ -2565,6 +2566,7 @@ select::-ms-expand {
   font-size: 0.9375rem;
   margin-top: 30px;
   margin-top: 1.875rem;
+  display: inline-block;
 }
 @media screen and (min-width: 768px) {
   .link_archive {
@@ -3582,12 +3584,17 @@ select::-ms-expand {
   margin-top: 20px;
   margin-top: 1.25rem;
   font-weight: normal;
+  border-bottom: none;
 }
 @media screen and (min-width: 768px) {
   .single_title.category {
     font-size: 0.9090909091vw;
     font-size: 1.875rem;
   }
+}
+
+.single_title.category a:hover {
+  opacity: 0.5;
 }
 
 .single_text {

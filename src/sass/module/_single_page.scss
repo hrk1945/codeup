@@ -44,10 +44,16 @@
   font-size: rem(16);
   margin-top: rem(20);
   font-weight: normal;
+  border-bottom: none;
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);
     font-size: rem(30);
   }
+}
+
+.single_title.category a:hover{
+ opacity: 0.5;
+
 }
 .single_text {
   padding-top: rem(30);

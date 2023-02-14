@@ -7,6 +7,7 @@
 }
 .link_inner {
   margin-top: rem(50);
+  text-align: center;
 }
 .link_flex {
   @include mq("md") {
@@ -24,6 +25,7 @@
   text-align: center;
   font-size: rem(15);
   margin-top: rem(30);
+  display: inline-block;
   @include mq("md") {
     font-size: vw(strip-unit($inner), 10);
     font-size: rem(20);
